@@ -13,6 +13,7 @@
 .mainTitle h2 span {
   color: #972DA8;
 }
+
 .mainTitle h2 .bgText {
   position: absolute;
   top: 50%;
@@ -50,6 +51,65 @@
 
 .container h3 {
   font-family: 'Fira Code';
-  font-size: 4rem;
+  line-height: 2;
+  font-size: 3rem;
   text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .mainTitle h2 {
+    font-size: 3.5rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 5rem;
+  }
+
+  .container h3 {
+    font-size: 3rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle h2 {
+    font-size: 2.5rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 4rem;
+  }
+
+  .container h3 {
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle h2 {
+    font-size: 2rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 3rem;
+  }
+
+  .container h3 {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
 }

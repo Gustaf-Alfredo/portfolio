@@ -11,7 +11,7 @@ export default function LoginPage() {
           </h2>
         </div>
 
-        <h3>Work in Progress...</h3>
+        <h3>Nenhum artigo disponível no momento...</h3>
       </section>
     </div>
   );

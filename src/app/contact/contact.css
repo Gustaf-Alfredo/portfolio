@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'MrRobot';
-  src: local('MrRobot'), url('../../../../public//MR\ ROBOT.ttf') format('truetype');
+  src: local('MrRobot'), url('/public/MR ROBOT.ttf') format('truetype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 
 .font-firaCode {
@@ -11,7 +11,7 @@
 }
 
 .font-mrRobot {
-  font-family: 'MrRobot';
+  font-family: 'MrRobot', serif;
 }
 
 .grid-cols-40-1fr {
@@ -36,7 +36,7 @@
 
 .mainTitle {
   text-align: center;
-  font-family: 'MrRobot';
+  font-family: 'MrRobot', serif;
   font-weight: 200;
 }
 
