@@ -58,11 +58,11 @@ export default function LoginPage() {
                             <div className={styles.hoverItems}>
                                 <h3>Project Source</h3>
                                 <div className={styles.icons}>
-                                    <a href={project.githubLink} className={styles.icon}>
+                                    <a href={project.githubLink} target={"_blank"} className={styles.icon}>
                                         <Image src={Github} alt="GitHub"/>
                                     </a>
-                                    <a href={project.githubLink} className={styles.icon}>
-                                    <Image src={Link} alt="Link"/>
+                                    <a href={project.siteLink} target={"_blank"} className={styles.icon}>
+                                        <Image src={Link} alt="Link"/>
                                     </a>
                                 </div>
                             </div>
