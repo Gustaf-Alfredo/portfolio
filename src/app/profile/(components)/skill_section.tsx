@@ -2,7 +2,6 @@ import styles from "@/app/profile/profile.module.css";
 import TypeScript from "../../../../public/assets/typescript.svg";
 import JavaScript from "../../../../public/assets/javascript.svg";
 import PostgreSQL from "../../../../public/assets/postgresql.svg";
-import Vue from "../../../../public/assets/vue.svg";
 import Node from "../../../../public/assets/nodejs.svg";
 import Flutter from "../../../../public/assets/flutter.svg";
 import Dart from "../../../../public/assets/dart.svg";
@@ -26,7 +25,6 @@ export const SkillsSection = () => (
                 {src: PostgreSQL, label: "PostgreSQL"},
             ]}/>
             <SkillItem title="Frameworks" items={[
-                {src: Vue, label: "Vue"},
                 {src: Next, label: "Next.JS"},
                 {src: Flutter, label: "Flutter"},
                 {src: Kotlin, label: "Kotlin"},
