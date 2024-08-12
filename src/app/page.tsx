@@ -74,7 +74,7 @@ export default function Home() {
                             <div className="px-8">
                                 <h1 className="text-[#972Da8] text-5xl font-mrRobot max-md:text-4xl max-md:text-center max-md:p-12 2xl:text-6xl">
                                     Hi, I&apos;m{" "}<span className="text-zinc-300">Gustavo <br/>Alfredo.</span><br/>A
-                                    Web <br/>Developer.
+                                    Web and Mobile<br/>Developer.
                                 </h1>
                                 {isMobile && (
                                     <div className="m-4 relative z-20">
