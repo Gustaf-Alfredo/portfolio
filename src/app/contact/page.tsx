@@ -54,7 +54,7 @@ export default function Contact() {
                         </p>
                         <div>
                             <ContactInfo icon="/assets/locate.svg" label="Localização" value="Paraíba, João Pessoa"/>
-                            <ContactInfo icon="/assets/email2.svg" label="Email" value="gustaf_alfredo@outlook.com"/>
+                            <ContactInfo icon="/assets/email2.svg" label="Email" value="gustavo64501@gmail.com"/>
                             <ContactInfo icon="/assets/phone.svg" label="Celular" value="(83) 99338-6900"/>
                             <ContactInfo icon="/assets/language.svg" label="Linguagens" value="Português e Inglês"/>
                         </div>
@@ -74,7 +74,7 @@ export default function Contact() {
                                     <Form.ErrorMessage field="email"/>
                                 </Form.Field>
                                 <Form.Field>
-                                    <Form.Label className="text-zinc-500 text-base" htmlFor="text">Texto</Form.Label>
+                                    <Form.Label className="text-zinc-300 text-base" htmlFor="text">Texto</Form.Label>
                                     <Form.TextArea cols={5} rows={5} text="text" name="text"/>
                                     <Form.ErrorMessage field="text"/>
                                 </Form.Field>

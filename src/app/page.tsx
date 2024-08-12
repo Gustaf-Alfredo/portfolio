@@ -4,14 +4,13 @@ import "./css/home.css";
 import { useMediaQuery } from "@react-hook/media-query";
 
 const handleDownload = () => {
-    // const externalDocxUrl = "https://docs.google.com/document/d/1G2EF60Y966s_KemFSr0gtY0MYxPSt2N7/edit?usp=sharing&ouid=117049130360771796719&rtpof=true&sd=true";
-    //
-    // const downloadLink = document.createElement("a");
-    // downloadLink.href = externalDocxUrl;
-    // downloadLink.setAttribute("download", "curriculum.docx");
-    // document.body.appendChild(downloadLink);
-    // downloadLink.click();
-    // document.body.removeChild(downloadLink);
+    const pdfUrl = "/assets/curriculum.pdf";
+    const downloadLink = document.createElement("a");
+    downloadLink.href = pdfUrl;
+    downloadLink.setAttribute("download", "curriculum.pdf");
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
 };
 
 const ProfileImage = ({ isMobile }: { isMobile: boolean }) => {
