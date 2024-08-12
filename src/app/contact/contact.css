@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'MrRobot';
-  src: local('MrRobot'), url('/public/MR ROBOT.ttf') format('truetype');
-}
-
-
 .font-firaCode {
   font-family: 'Fira Code', monospace;
 }

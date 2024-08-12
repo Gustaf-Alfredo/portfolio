@@ -8,7 +8,6 @@ import {Form} from '@/components/Form';
 import Title from "@/components/title/Title";
 import ContactInfo from "@/app/contact/(components)/contact_item";
 import emailjs from '@emailjs/browser';
-import {Simulate} from "react-dom/test-utils";
 import 'react-toastify/dist/ReactToastify.css';
 import {toast, ToastContainer} from "react-toastify";
 
@@ -19,8 +18,8 @@ const userSchema = z.object({
         .toLowerCase(),
     name: z.string()
         .min(1, {message: 'Nome é obrigatório'})
-        .toUpperCase(),
-    text: z.string().min(1, {message: 'Texto é obrigatório'})
+        .toLowerCase(),
+    message: z.string().min(1, {message: 'Texto é obrigatório'})
 });
 
 type UserData = z.infer<typeof userSchema>;
@@ -31,10 +30,11 @@ export default function Contact() {
     });
 
     const [output, setOutput] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const {handleSubmit, formState: {isSubmitting}, getValues, register, reset} = UserForm;
 
     const userText = async (data: UserData) => {
-        console.log(data);
+        setIsLoading(true);
         setOutput(JSON.stringify(data, null, 3));
         emailjs.send("service_usmc56d","template_8w6jpxw",data,"b2avlMLvU5oTcRKSH").then((res) => {
             console.log("Success", res.text, res.status);
@@ -43,6 +43,8 @@ export default function Contact() {
         }, (err) => {
             console.log("Failed", err);
             toast.error("Erro ao enviar mensagem!");
+        }).finally(() => {
+            setIsLoading(false);
         });
     };
 
@@ -79,13 +81,13 @@ export default function Contact() {
                                     <Form.ErrorMessage field="email"/>
                                 </Form.Field>
                                 <Form.Field>
-                                    <Form.Label className="text-zinc-300 text-base" htmlFor="text">Texto</Form.Label>
-                                    <Form.TextArea cols={5} rows={5} text="text" name="text"/>
-                                    <Form.ErrorMessage field="text"/>
+                                    <Form.Label className="text-zinc-300 text-base" htmlFor="message">Texto</Form.Label>
+                                    <Form.TextArea cols={5} rows={5} text="message" name="message"/>
+                                    <Form.ErrorMessage field="message"/>
                                 </Form.Field>
-                                <button type="submit" disabled={isSubmitting}
+                                <button type="submit" disabled={isSubmitting || isLoading}
                                         className="bg-[#972DA8] text-white rounded px-3 h-10 font-semibold text-sm hover:bg-violet-600 max-sm:my-4">
-                                    Enviar
+                                    {isLoading ?  "Enviando..."  : "Enviar" }
                                 </button>
                             </form>
                         </FormProvider>
