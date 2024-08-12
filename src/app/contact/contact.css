@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'MrRobot';
+  src: local('MrRobot'), url('../../../../public//MR\ ROBOT.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+.font-firaCode {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-mrRobot {
+  font-family: 'MrRobot';
+}
+
+.grid-cols-40-1fr {
+  grid-template-columns: 40px 1fr;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.teste a:hover {
+  background-color: #972DA8;
+}
+.teste a:hover i {
+  color: #972DA8;
+}
+
+
+.mainTitle {
+  text-align: center;
+  font-family: 'MrRobot';
+  font-weight: 200;
+}
+
+.mainTitle h2 span {
+  color: #972DA8;
+}
+.mainTitle h2 .bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff10;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 200;
+  font-size: 5.3rem;
+}
+
+.mainTitle h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 200;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .mainTitle h2 .bgText {
+    font-size: 5.3rem;
+  }
+  .mainTitle h2 {
+    font-size: 3rem;
+  }
+}
