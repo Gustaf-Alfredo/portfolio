@@ -8,6 +8,9 @@ import {Form} from '@/components/Form';
 import Title from "@/components/title/Title";
 import ContactInfo from "@/app/contact/(components)/contact_item";
 import emailjs from '@emailjs/browser';
+import {Simulate} from "react-dom/test-utils";
+import 'react-toastify/dist/ReactToastify.css';
+import {toast, ToastContainer} from "react-toastify";
 
 const userSchema = z.object({
     email: z.string()
@@ -28,27 +31,29 @@ export default function Contact() {
     });
 
     const [output, setOutput] = useState<string>('');
-    const {handleSubmit, formState: {isSubmitting}, getValues, register} = UserForm;
+    const {handleSubmit, formState: {isSubmitting}, getValues, register, reset} = UserForm;
 
     const userText = async (data: UserData) => {
         console.log(data);
         setOutput(JSON.stringify(data, null, 3));
         emailjs.send("service_usmc56d","template_8w6jpxw",data,"b2avlMLvU5oTcRKSH").then((res) => {
             console.log("Success", res.text, res.status);
-            // setOutput('');
+            reset();
+            toast.success("Mensagem enviada com sucesso!");
         }, (err) => {
             console.log("Failed", err);
+            toast.error("Erro ao enviar mensagem!");
         });
     };
 
     return (
-        <section className="py-12 px-24 text-zinc-200 bg-[#2A2E35] max-sm:py-8 max-sm:px-14">
+        <section className="py-12 px-24 text-zinc-200 bg-[#2A2E35] max-sm:py-8 max-sm:px-4 overflow-x-hidden">
             <div className="font-firaCode">
                 <Title text="Contact" textSpan="me" span="Contact me"/>
                 <div className="flex flex-col pt-12">
                     <div className="flex-2 justify-center items-center text-center">
-                        <h4 className="mt-4 text-4xl uppercase">Contact me here</h4>
-                        <p className="my-4 mx-auto leading-8 max-w-prose">
+                        <h4 className="mt-4 text-4xl uppercase max-sm:text-3xl">Contact me here</h4>
+                        <p className="my-4 mx-auto leading-8 max-w-prose max-sm:text-base">
                             Precisa de mais informações ou deseja entrar em contato comigo? Preencha o formulário abaixo
                             com seu nome, e-mail e mensagem. Responderei o mais breve possível.
                         </p>
@@ -87,6 +92,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </section>
     );
 }
