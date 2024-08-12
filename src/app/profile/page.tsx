@@ -11,7 +11,7 @@ const AboutSection = () => (
       </div>
         <div className={styles.aboutContainer}>
             <div className={styles.leftAbout}>
-                <p>
+                <p className={styles.textAbout}>
                     Especializado em criar soluções rápidas e eficientes para aplicativos mobile e web, garantindo alta
                     performance e usabilidade. Focado em entregar produtos que atendam tanto às necessidades dos
                     usuários quanto aos objetivos de negócio. <br/><br/>

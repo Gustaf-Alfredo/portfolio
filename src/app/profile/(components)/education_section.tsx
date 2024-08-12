@@ -61,7 +61,7 @@ export const EducationSection = () => (
                     <p>Matérias relevantes:</p>
                     <ul className={styles.timelineList}>
                         {item.subjects.map((subject, idx) => (
-                            <li className="smallSimpleText" key={idx}>teste</li>
+                            <li className="smallSimpleText" key={idx}>{item.subjects[idx]}</li>
                         ))}
                     </ul>
                 </div>
