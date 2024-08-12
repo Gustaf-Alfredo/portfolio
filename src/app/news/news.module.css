@@ -1,0 +1,115 @@
+.content {
+  padding: 4rem;
+  background-color: #2A2E35;
+  height: 100vh;
+}
+
+.mainTitle {
+  text-align: center;
+  font-family: 'MrRobot';
+  font-weight: 200;
+}
+
+.mainTitle h2 span {
+  color: #972DA8;
+}
+
+.mainTitle h2 .bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff10;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 200;
+  font-size: 6.3rem;
+}
+
+.mainTitle h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 200;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+.workInProgress {
+  background-color: antiquewhite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.container h3 {
+  font-family: 'Fira Code';
+  line-height: 2;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .mainTitle h2 {
+    font-size: 3.5rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 5rem;
+  }
+
+  .container h3 {
+    font-size: 3rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle h2 {
+    font-size: 2.5rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 4rem;
+  }
+
+  .container h3 {
+    font-size: 2.5rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle h2 {
+    font-size: 2rem;
+  }
+
+  .mainTitle h2 .bgText {
+    font-size: 3rem;
+  }
+
+  .container h3 {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}
